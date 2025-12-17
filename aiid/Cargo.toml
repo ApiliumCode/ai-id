@@ -1,16 +1,20 @@
 [package]
-name = "aiid"
+name = "aingle-id"
 authors = [ "Apilium Technologies <hello@apilium.com>"]
-version = "0.0.3"
+version = "0.1.0"
 edition = "2021"
-rust-version = "1.70"
+rust-version = "1.89"
 description = "AIngle base32 encoding scheme for keys, agents, identifiers, etc"
-keywords = ["base32", "encoding", "decoding", "erasure", "reed-solomon"]
+keywords = ["aingle", "base32", "encoding", "decoding", "reed-solomon"]
 categories = ["encoding"]
 license = "Apache-2.0"
 readme = "README.md"
-documentation = "https://docs.rs/aiid"
+documentation = "https://docs.rs/aingle-id"
+homepage = "https://apilium.com"
 repository = "https://github.com/ApiliumCode/ai-id"
+
+[lib]
+name = "aingle_id"
 
 [dependencies]
 reed-solomon = "0.2.1"
