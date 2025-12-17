@@ -21,13 +21,13 @@ macro_rules! jserr {
 }
 
 #[wasm_bindgen]
-pub struct Encoding(aiid::aiidEncoding);
+pub struct Encoding(aingle_id::AiidEncoding);
 
 #[wasm_bindgen]
 impl Encoding {
     #[wasm_bindgen(constructor)]
     pub fn new(encoding_name: &str) -> JsResult<Encoding> {
-        Ok(Encoding(jserr!(aiid::aiidEncoding::with_kind(encoding_name))?))
+        Ok(Encoding(jserr!(aingle_id::AiidEncoding::with_kind(encoding_name))?))
     }
 
     pub fn encode(&self, data: &[u8]) -> JsResult<String> {

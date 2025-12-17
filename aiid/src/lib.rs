@@ -4,7 +4,7 @@
 //!
 //! ```
 //! fn main() {
-//!     let enc = aiid::AiidEncoding::with_kind("ais0").unwrap();
+//!     let enc = aingle_id::AiidEncoding::with_kind("ais0").unwrap();
 //!     let key = enc.encode(&[0; 32]).unwrap();
 //!     assert_eq!("aiSciaaaa", &key[..9]);
 //!     let buffer = enc.decode(&key).unwrap();
@@ -118,10 +118,9 @@ impl AiidEncodingConfig {
     /// # Example
     ///
     /// ```
-    /// extern crate aiid;
-    /// let aia0 = aiid::AiidEncodingConfig::new("aia0").unwrap();
-    /// let aik0 = aiid::AiidEncodingConfig::new("aik0").unwrap();
-    /// let ais0 = aiid::AiidEncodingConfig::new("ais0").unwrap();
+    /// let aia0 = aingle_id::AiidEncodingConfig::new("aia0").unwrap();
+    /// let aik0 = aingle_id::AiidEncodingConfig::new("aik0").unwrap();
+    /// let ais0 = aingle_id::AiidEncodingConfig::new("ais0").unwrap();
     /// ```
     pub fn new(kind: &str) -> AiidResult<Self> {
         let kind_b = kind.as_bytes();
@@ -184,10 +183,9 @@ impl AiidEncoding {
     /// # Example
     ///
     /// ```
-    /// extern crate aiid;
-    /// let aia0 = aiid::AiidEncoding::with_kind("aia0").unwrap();
-    /// let aik0 = aiid::AiidEncoding::with_kind("aik0").unwrap();
-    /// let ais0 = aiid::AiidEncoding::with_kind("ais0").unwrap();
+    /// let aia0 = aingle_id::AiidEncoding::with_kind("aia0").unwrap();
+    /// let aik0 = aingle_id::AiidEncoding::with_kind("aik0").unwrap();
+    /// let ais0 = aingle_id::AiidEncoding::with_kind("ais0").unwrap();
     /// ```
     pub fn with_kind(kind: &str) -> AiidResult<Self> {
         AiidEncoding::new(AiidEncodingConfig::new(kind)?)

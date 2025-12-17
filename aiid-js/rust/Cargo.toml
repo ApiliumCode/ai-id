@@ -1,20 +1,20 @@
 [package]
-name = "aiid_js"
-authors = [ "AIngle Core Dev Team <devcore@aingle.ai>"]
-version = "0.0.2"
+name = "aingle-id-js"
+authors = [ "Apilium Technologies <hello@apilium.com>"]
+version = "0.1.0"
 edition = "2021"
-rust-version = "1.70"
-description = "AIngle encoding scheme for keys, agents, identifiers, etc"
-keywords = ["base32", "encoding", "decoding", "erasure", "reed-solomon"]
-categories = ["encoding"]
+rust-version = "1.89"
+description = "AIngle encoding scheme for keys, agents, identifiers - WASM bindings"
+keywords = ["aingle", "base32", "encoding", "decoding", "wasm"]
+categories = ["encoding", "wasm"]
 license = "Apache-2.0"
 
 [lib]
-name = "aiid_js"
+name = "aingle_id_js"
 crate-type = ["cdylib"]
 
 [dependencies]
-aiid = { path = "../../aiid" }
+aingle-id = { path = "../../aiid" }
 wasm-bindgen = "0.2"
 
 # Use lol_alloc instead of deprecated wee_alloc
