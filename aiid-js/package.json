@@ -1,0 +1,52 @@
+{
+  "name": "@aingle/aiid-js",
+  "version": "0.0.5",
+  "description": "javascript (wasm) build for rust AIngle base32 encoding scheme for keys, agents, identifiers, etc",
+  "main": "lib/index.js",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ApiliumCode/ai-id.git"
+  },
+  "keywords": [
+    "base32",
+    "encoding",
+    "decoding",
+    "erasure",
+    "reed-solomon"
+  ],
+  "dependencies": {
+    "text-encoding": "^0.7.0"
+  },
+  "scripts": {
+    "test": "standard lib/*.js && npm run test:node && npm run test:browser",
+    "test:node": "mocha lib/*.test.js",
+    "test:browser": "karma start"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/plugin-transform-runtime": "^7.26.0",
+    "chai": "^4.5.0",
+    "karma": "^6.4.0",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-firefox-launcher": "^2.1.0",
+    "karma-mocha": "^2.0.0",
+    "karma-parcel": "^0.4.0",
+    "mocha": "^10.8.0",
+    "parcel-bundler": "^1.12.5",
+    "standard": "^17.1.0"
+  },
+  "standard": {
+    "env": {
+      "mocha": true
+    },
+    "ignore": [
+      "lib/bindgen*",
+      "lib/browser/bindgen*"
+    ]
+  },
+  "browser": {
+    "./lib/index.js": "./lib/browser/index.js"
+  }
+}

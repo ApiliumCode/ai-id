@@ -1,0 +1,20 @@
+[package]
+name = "aiid"
+authors = [ "Apilium Technologies <hello@apilium.com>"]
+version = "0.0.3"
+edition = "2021"
+rust-version = "1.70"
+description = "AIngle base32 encoding scheme for keys, agents, identifiers, etc"
+keywords = ["base32", "encoding", "decoding", "erasure", "reed-solomon"]
+categories = ["encoding"]
+license = "Apache-2.0"
+readme = "README.md"
+documentation = "https://docs.rs/aiid"
+repository = "https://github.com/ApiliumCode/ai-id"
+
+[dependencies]
+reed-solomon = "0.2.1"
+
+[dev-dependencies]
+hex = "0.4"
+serde_json = "1.0"
